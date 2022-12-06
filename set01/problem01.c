@@ -1,7 +1,10 @@
-#include<stdio.h>
-main()
+#include <stdio.h>
+int main()
 {
- char name;
-  printf("My name is Dharshan: ");
-  scanf("%c",&name);
+  int a=50;
+  int b=50;
+
+  int sum = a+b;
+  printf("%d \n", sum);
+  return 0;
 }
