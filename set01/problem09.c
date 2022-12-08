@@ -1,55 +1,28 @@
+#include <math.h>
 #include <stdio.h>
-
-
-int input_array_size();
-void input_array(int n, int a[n]);
-int sum_n_array(int n, int a[n]);
-void output(int n, int a[n], int sum);
-
-
-int input_array_size()
-{
-  int n;
-  printf("Enter the size of the array\n");
-  scanf("%d", &n);
-  return n;
-}
-
-void input_array(int n, int a[n])
-{
-  for(int i=0;i<n;i++)
-    {
-      scanf("%d", &a[i]);
-    }
-}
-
-int sum_n_array(int n, int a[n])
-{
-   int sum=0;
-  for(int i=0; i<n; i++)
-    {
-      sum=sum+a[i];
-    }
-  return sum;
-}
-
-void output(int n, int a[n], int sum)
-{
-  printf("the sum of ");
-  for(int i=0;i<n;i++)
-    {
-    printf("%d ", a[i]);
-      }
-    printf("is %d", sum);
-}
-
+float input();
+float square_root(float n);
+void output(float n, float sqrroot);
 int main()
 {
-  int n, sum=0;
-  n=input_array_size();
-  int a[n];
-  input_array(n, a);
-  sum=sum_n_array(n, a);
-  output(n, sum);
-  return 0;
+  double n ,sqrroot;
+  n=input();
+  sqrroot=square_root(n);
+  output(n, sqrroot);
+}  
+float input()
+{
+  double n;
+  printf("Enter the number ");
+  scanf("%lf",&n);
+  return n;
+}
+float square_root(float n)
+{
+  double sqrroot=sqrt(n);
+  retur. n sqrroot;
+}
+void output(float n ,float sqrroot)
+{
+  printf("Square root of %.2lf =  %.2lf",n,sqrroot);
 }
